@@ -37,9 +37,31 @@
           </div>
         </div>    
         
-        
-        <div class="chart"></div>
-      
+        <div class="bottom-left">
+          <div class="chart">chart</div>
+          <div class="whitenoise">
+            <P>Whitenoise</P>
+            <img src="images/play.png" id="icon">
+          </div>
+        </div>
+        <audio id="mysong" >
+          <source src="audio/rain.mp3" type="audio/mp3">
+        </audio>
+        <script>
+          var mysong =document.getElementById("mysong");
+          var icon = document.getElementById("icon");
+          icon.onclick = function(){
+            if (mysong.paused){
+              mysong.play();
+              icon.src = "images/pause.png"  
+            }else{
+              mysong.pause();
+              icon.src = "images/play.png";
+            }
+            
+          }
+        </script>
+
       
       
       </div>
